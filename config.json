@@ -1,0 +1,37 @@
+{
+    "model_config": {
+        "use": {
+            "path": "models/USE/universal-sentence-encoder_4"
+        },
+        "sbert": {
+            "path": ""
+        },
+        "laser": {
+            "path": "models/Laser/",
+            "bpe_code":"models/Laser/93langs.fcodes",
+            "bpe_vocab":"models/Lase/93langs.fvocab",
+            "encoder":"models/Laser/bilstm.93langs.2018-12-26.pt"
+        },
+        "infersent": {
+            "path":"", 
+            "model":"models/InferSent/encoder/",
+            "vocab_size":100000,
+            "encoder":{ "v1":"./models/infersent/encoder/infersent1.pkl",
+                "v2":"./models/InferSent/encoder/infersent2.pkl"
+            },
+            "model_version": "./models/infersent/GloVe/glove.840B.300d.txt",
+            "params_model": {
+                "bsize": 64,
+                "word_emb_dim": 300,
+                "enc_lstm_dim": 2048,
+                "pool_type": "max",
+                "dpout_model": 0.0,
+                "version": 1
+            }
+        },
+        "doc2vec": {
+            "path": ""
+        }
+    }
+    
+}
